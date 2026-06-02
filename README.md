@@ -32,3 +32,14 @@ https://vortex-fm.vercel.app/
 ## 👨‍💻 Author
 
 HeerakerPoojamaheshwari
+
+## 📸 Screenshots
+
+### Home Page
+
+![Home](Home page.png)
+
+### Fullscreen Player
+
+![Fullscreen](Full screen Player.png)
+
