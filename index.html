@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>VortexFM</title>
+
+    <link
+    rel="stylesheet"
+    href="style.css">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- PARTICLES -->
+
+    <div class="particles"></div>
+
+    <!-- RAIN -->
+
+    <div class="rain"></div>
+
+    <!-- AI DJ -->
+
+    <div id="ai-dj-box">
+
+        <i class="fa-solid fa-robot"></i>
+
+        <span id="ai-dj-text">
+            Welcome to VortexFM
+        </span>
+
+    </div>
+
+    <!-- APP -->
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="logo-box">
+
+                <div class="logo-circle">
+                    <i class="fa-solid fa-wave-square"></i>
+                </div>
+
+                <h1 class="logo">
+                    VortexFM
+                </h1>
+
+            </div>
+
+            <nav>
+
+                <a href="#" class="active">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Home
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-music"></i>
+
+                    Library
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    Favorites
+
+                </a>
+
+            </nav>
+
+            <!-- MOODS -->
+
+            <div class="moods">
+
+                <h3>MOODS</h3>
+
+                <button class="mood-btn">
+                    Night Drive
+                </button>
+
+                <button class="mood-btn">
+                    Rainy Nights
+                </button>
+
+                <button class="mood-btn">
+                    Dreamscape
+                </button>
+
+                <button class="mood-btn">
+                    Focus Mode
+                </button>
+
+            </div>
+
+        </aside>
+
+        <!-- MAIN -->
+
+        <main class="main-content">
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <input
+                type="text"
+                id="search-input"
+                placeholder="Search songs...">
+
+            </div>
+
+            <!-- TITLE -->
+
+            <div class="hero">
+
+                <h1>
+                    Night Drive Experience
+                </h1>
+
+                <p>
+                    AI-powered immersive music universe
+                </p>
+
+            </div>
+
+            <!-- SONGS -->
+
+            <div
+            id="songs-container"
+            class="songs-grid">
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- PLAYER -->
+
+    <footer class="player">
+
+        <!-- SONG INFO -->
+
+        <div class="song-info">
+
+            <img
+            id="player-album-art"
+            src=""
+            alt="album">
+
+            <div>
+
+                <h4 id="player-song-title">
+                    Select Song
+                </h4>
+
+                <p id="player-artist-name">
+                    Artist
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- CONTROLS -->
+
+        <div class="center-player">
+
+            <div class="controls">
+
+                <button id="shuffle-btn">
+                    <i class="fa-solid fa-shuffle"></i>
+                </button>
+
+                <button id="prev-btn">
+                    <i class="fa-solid fa-backward-step"></i>
+                </button>
+
+                <button id="play-btn">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+
+                <button id="next-btn">
+                    <i class="fa-solid fa-forward-step"></i>
+                </button>
+
+                <button id="repeat-btn">
+                    <i class="fa-solid fa-repeat"></i>
+                </button>
+
+            </div>
+
+            <!-- PROGRESS -->
+
+            <div class="progress-container">
+
+                <span id="current-time">
+                    0:00
+                </span>
+
+                <input
+                type="range"
+                id="progress-bar"
+                value="0">
+
+                <span id="duration">
+                    0:00
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="right-player">
+
+            <!-- VISUALIZER -->
+
+            <div class="visualizer">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+            <!-- VOLUME -->
+
+            <div class="volume-container">
+
+                <i class="fa-solid fa-volume-high"></i>
+
+                <input
+                type="range"
+                id="volume-slider"
+                min="0"
+                max="100"
+                value="100">
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- FULLSCREEN PLAYER -->
+
+    <div id="fullscreen-player">
+
+        <button id="close-fullscreen">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+        <img
+        id="fullscreen-album-art"
+        src=""
+        alt="album">
+
+        <h1 id="fullscreen-song-title">
+            Song
+        </h1>
+
+        <p id="fullscreen-artist-name">
+            Artist
+        </p>
+
+        <!-- LYRICS -->
+
+        <div id="lyrics-box">
+
+            <p id="lyrics-text">
+
+                Lost in the neon lights...
+
+            </p>
+
+        </div>
+
+        <!-- CONTROLS -->
+
+        <div class="fullscreen-controls">
+
+            <button id="fs-prev-btn">
+
+                <i class="fa-solid fa-backward-step"></i>
+
+            </button>
+
+            <button id="fs-play-btn">
+
+                <i class="fa-solid fa-play"></i>
+
+            </button>
+
+            <button id="fs-next-btn">
+
+                <i class="fa-solid fa-forward-step"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- TOAST -->
+
+    <div id="toast"></div>
+
+    <!-- SHORTCUTS -->
+
+    <div class="shortcut-box">
+
+        SPACE → Play/Pause <br>
+
+        ← → Previous Song <br>
+
+        → → Next Song
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
